@@ -1,3 +1,42 @@
+# fork说明
+
+## 生成ePub格式
+原因有二：
+
+1. 经常使用kindle阅读，原作者生成pdf导入进去字体非常小，阅读很累，因此将该文档转移到了mdbook
+
+2. 都学习rust，mdbook用起来啊
+
+转移步骤
+
+- 将原有src的文件删除，md内的markdown文件复制过去
+- 设置book.toml中的src为.，好处是不用调整img路径，直接使用
+- 安装mdbook-epub `cargo install mdbook-epub`
+- 在book.toml中增加一行[output.epub]
+
+
+## Building with mdbook
+
+This book is built with [mdbook](https://rust-lang.github.io/mdBook/). You can
+install it by running `cargo install mdbook`.
+
+If you want to build it locally you can run one of these two commands in the root
+directory of the repository:
+
+- `mdbook build`
+
+  Builds static html pages as output and place them in the `/book` directory by
+  default.
+
+- `mdbook serve`
+
+  Serves the book at `http://localhost:3000` (port is changeable, take a look at
+  the terminal output to be sure) and reloads the browser when a change occurs.
+
+## License
+
+The content of this repository is licensed under **MPL-2.0**; see [LICENSE](./LICENSE).
+
 # Programming Rust
 
 本书为《Programming Rust - Fast, Safe Systems Development》第2版的个人中文翻译，仅供学习和交流使用，如有侵权请联系作者删除
@@ -56,7 +95,7 @@
 
 ---
 
-## 编译
+## 编译（fork后已无效，请参考fork说明）
 
 1. 安装`tectonic`
 2. 安装`python`
